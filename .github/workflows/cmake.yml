@@ -29,8 +29,8 @@ jobs:
         cmake ../../${{env.GTEST}} && make
 
     - name: Build target and unit-test
-      run: cd .. && cmake ../ && make
+      run: cd ${{github.workspace}}/build && cmake ../ && make
 
     - name: Test
-      run: ./unit_test
+      run: cd ${{github.workspace}}/build && ./unit_test
       
