@@ -34,7 +34,7 @@ jobs:
         cmake ../../ && make
 
     - name: Build target and unit-test
-      run: cd .. && cmake ../ make
+      run: cd .. && cmake ../ && make
 
     - name: Test
       run: ./unit_test
