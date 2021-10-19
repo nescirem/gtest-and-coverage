@@ -22,13 +22,13 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Install Dependencies
-      run: apt-get install unzip
+      run: sudo apt-get install unzip
       
     - name: Prepare gtest
       run: unzip googletest-release-1.8.1.zip
       
     - name: Make Google Test in './build/gtest/' folder
-      run: 
+      run: |
         mkdir build && cd build
         mkdir gtest && cd gtest
         cmake ../../ && make
