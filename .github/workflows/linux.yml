@@ -1,4 +1,4 @@
-name: CMake
+name: Linux test
 
 on:
   push:
